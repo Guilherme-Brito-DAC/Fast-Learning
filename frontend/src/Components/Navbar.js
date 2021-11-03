@@ -20,13 +20,13 @@ export default function Navbar({ setAulaId }) {
     }
 
     useEffect(() => {
-        postData('http://localhost:4000/').then(data => {
+        postData('https://3cl4albr3e.execute-api.us-east-2.amazonaws.com/staging/').then(data => {
             setModulos(data)
         })
     }, [])
 
     useEffect(() => {
-        postData(`http://localhost:4000/modulos/${id}`).then(data => {
+        postData(`https://3cl4albr3e.execute-api.us-east-2.amazonaws.com/staging/modulos/${id}`).then(data => {
             setAulas(data)
         })
     }, [id])
@@ -68,7 +68,7 @@ export default function Navbar({ setAulaId }) {
     function HandleSubmit(e) {
         e.preventDefault()
 
-        postData(`http://localhost:4000/search/${e.target.search.value}`).then(data => {
+        postData(`https://3cl4albr3e.execute-api.us-east-2.amazonaws.com/staging/search/${e.target.search.value}`).then(data => {
             setAulaId(data.id)
         })
     }

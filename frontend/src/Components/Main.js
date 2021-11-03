@@ -19,7 +19,7 @@ export default function Main(aula_id) {
 
     useEffect(() => {
         setLoading(true)
-        postData(`http://localhost:4000/aulas/${aula_id.aula_id}`).then(data => {
+        postData(`https://3cl4albr3e.execute-api.us-east-2.amazonaws.com/staging/aulas/${aula_id.aula_id}`).then(data => {
             setAula(data[0])
             setLoading(false)
         })

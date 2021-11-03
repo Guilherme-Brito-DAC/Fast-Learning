@@ -10,6 +10,14 @@
       "StackName": "amplify-amplify4d6599afb53a4-staging-123616",
       "StackId": "arn:aws:cloudformation:us-east-2:672311683720:stack/amplify-amplify4d6599afb53a4-staging-123616/a3c3cf10-3ca2-11ec-a9bc-0af70037cf58",
       "AmplifyAppId": "d3s40k6kxt6t7a"
+    },
+    "categories": {
+      "function": {
+        "lambda": {
+          "deploymentBucketName": "amplify-amplify4d6599afb53a4-staging-123616-deployment",
+          "s3Key": "amplify-builds/lambda-305a544e75472f724847-build.zip"
+        }
+      }
     }
   }
 }
