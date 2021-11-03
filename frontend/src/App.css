@@ -1,0 +1,30 @@
+/* 
+    background = #121212
+    Navbar = #181c1f
+    headNavbar = #222629
+    verde = #2dc653
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&family=Zen+Maru+Gothic:wght@300&display=swap');
+
+:root{
+    --background_color : #121212;
+    --Navbar : #181c1f;
+    --headNavbar : #222629;
+    --verde : #2dc653;
+    --white : #ffffff;
+    --input: #282c2f;
+    transition: 0.5s;
+}
+
+body{
+    background-color: var(--background_color);
+    color: var(--white);
+    transition: 0.5s;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:var(--white);
+}
