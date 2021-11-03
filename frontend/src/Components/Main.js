@@ -1,39 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css'
 
-export default function Main(aula_id) {
+export default function Main(aula) {
 
-    const [loading, setLoading] = useState(false)
-    const [aula, setAula] = useState([])
-
-    async function postData(url = '') {
-        const response = await fetch(url, {
-            method: 'GET',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-        return response.json()
-    }
-
-    useEffect(() => {
-        setLoading(true)
-        postData(`https://3cl4albr3e.execute-api.us-east-2.amazonaws.com/staging/aulas/${aula_id.aula_id}`).then(data => {
-            setAula(data[0])
-            setLoading(false)
-        })
-    }, [aula_id])
+    aula = aula.aula
 
     return (
         <main>
-            {
-                loading &&
-                <div className="loading">
-                    <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
-                </div>
-            }
-
             {
                 aula.tipo === "video" &&
                 <>

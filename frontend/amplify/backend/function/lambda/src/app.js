@@ -4,7 +4,11 @@ const mysql = require('mysql')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 
 const app = express()
-app.use(cors())
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "*")
+  next()
+})
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 connection = mysql.createConnection({
